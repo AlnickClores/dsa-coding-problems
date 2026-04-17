@@ -1,9 +1,9 @@
 # Find the first duplicate pair in an array (return the indices of the first matching duplicate)
-nums =  [1,2,3,4,1]
+nums =  [1,2,3,4,2,5]
 
 def findDuplicate(x):
     for i in range(len(x) - 1):
-        for j in range(1, len(x)):
+        for j in range(i + 1, len(x)):
             if x[i] == x[j]:
                 return i, j
     return -1
